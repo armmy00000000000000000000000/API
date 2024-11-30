@@ -1,0 +1,496 @@
+{
+	"info": {
+		"_postman_id": "2f911e15-0023-4c0a-9dd9-80952e3b46bb",
+		"name": "ระบบทะเบียนคุม ภท.อุบล",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21561472",
+		"_collection_link": "https://universal-meteor-960196.postman.co/workspace/zoo-e-tictek~c73201ac-eb9a-4fa6-aa84-b9f9877d495f/collection/21561472-2f911e15-0023-4c0a-9dd9-80952e3b46bb?action=share&source=collection_link&creator=21561472"
+	},
+	"item": [
+		{
+			"name": "PT",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "ce82e7e81711b2bb095fd70284dae3c1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://icandefine.com/api_control/service/pt.php?service=list",
+							"protocol": "https",
+							"host": [
+								"icandefine",
+								"com"
+							],
+							"path": [
+								"api_control",
+								"service",
+								"pt.php"
+							],
+							"query": [
+								{
+									"key": "service",
+									"value": "list"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "income_allocation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "ce82e7e81711b2bb095fd70284dae3c1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n////// กำ หนด พรบ. ว่าจะแบ่งรายได้ให้ ส่วนไหนบ้าง\r\n[\r\n    {\r\n        \"income_type_id\": 21,\r\n        \"allocation_name\": \"อบต\"\r\n    },\r\n    {\r\n        \"income_type_id\": 22,\r\n        \"allocation_name\": \"เงินกองทุนฯ\"\r\n    },\r\n    {\r\n        \"income_type_id\": 22,\r\n        \"allocation_name\": \"รายได้แผ่นดิน\"\r\n    }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://icandefine.com/api_control/service/pt.php?service=income_allocation",
+							"protocol": "https",
+							"host": [
+								"icandefine",
+								"com"
+							],
+							"path": [
+								"api_control",
+								"service",
+								"pt.php"
+							],
+							"query": [
+								{
+									"key": "service",
+									"value": "income_allocation"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sub_allocation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "ce82e7e81711b2bb095fd70284dae3c1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n\r\n////// เลือก list เทศบาล  หรือ อบต เพื่อกำหนด รายชื่อในเทศบาล หรือรายชื่อใน อบต\r\n [\r\n    {\r\n        \"allocation_id\": 11,\r\n        \"sub_allocation_name\": \"ดอนชี\",\r\n        \"station\": \"1\"\r\n    },\r\n    {\r\n        \"allocation_id\": 11,\r\n        \"sub_allocation_name\": \"ดอนไฮ\",\r\n        \"station\": \"1\"\r\n    },\r\n    {\r\n        \"allocation_id\": 11,\r\n        \"sub_allocation_name\": \"ดอนเม\",\r\n        \"station\": \"1\"\r\n    }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://icandefine.com/api_control/service/pt.php?service=sub_allocation",
+							"protocol": "https",
+							"host": [
+								"icandefine",
+								"com"
+							],
+							"path": [
+								"api_control",
+								"service",
+								"pt.php"
+							],
+							"query": [
+								{
+									"key": "service",
+									"value": "sub_allocation"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SP",
+			"item": [
+				{
+					"name": "get_income_type",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "ce82e7e81711b2bb095fd70284dae3c1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://icandefine.com/api_control/service/sp.php?service=get_income_type&station=",
+							"protocol": "https",
+							"host": [
+								"icandefine",
+								"com"
+							],
+							"path": [
+								"api_control",
+								"service",
+								"sp.php"
+							],
+							"query": [
+								{
+									"key": "service",
+									"value": "get_income_type"
+								},
+								{
+									"key": "station",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_income",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "ce82e7e81711b2bb095fd70284dae3c1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\r\n//     \"income_date\": \"2024-11-01\",\r\n//     \"document_number\": \"123/2024\",\r\n//     \"payment_type\": \"รง.\",\r\n//     \"income_type_id\": 1,\r\n//     \"total_amount\": 500,\r\n//     \"station\": 1,\r\n//     \"allocations\": [\r\n//         {\r\n//             \"allocation_id\": 1,\r\n//             \"amount\": 3000,\r\n//             \"sub_allocations\": [\r\n//                 {\r\n//                     \"sub_allocation_id\": 1,\r\n//                     \"amount\": 1500\r\n//                 },\r\n//                 {\r\n//                     \"sub_allocation_id\": 2,\r\n//                     \"amount\": 1500\r\n//                 }\r\n//             ]\r\n//         },\r\n//         {\r\n//             \"allocation_id\": 2,\r\n//             \"amount\": 2000,\r\n//             \"sub_allocations\": []\r\n//         }\r\n//     ]\r\n// }\r\n\r\n\r\n{\r\n    \"income_date\": \"2024-11-08\",\r\n    \"document_number\": \"บร.111/67\",\r\n    \"payment_type\": \"บร.\",\r\n    \"income_type_id\": \"24\",\r\n    \"total_amount\": \"1000\",\r\n    \"station\": \"3\",\r\n    \"note\": \"นำส่งข้อมูลการจัดเก็บรายได้\",\r\n    \"year\": \"2567\",\r\n    \"allocations\": [\r\n        {\r\n            \"allocation_id\": \"46\",\r\n            \"amount\": 200,\r\n            \"sub_allocations\": []\r\n        },\r\n        {\r\n            \"allocation_id\": \"47\",\r\n            \"amount\": 200,\r\n            \"sub_allocations\": []\r\n        },\r\n        {\r\n            \"allocation_id\": \"48\",\r\n            \"amount\": 100,\r\n            \"sub_allocations\": []\r\n        },\r\n        {\r\n            \"allocation_id\": \"49\",\r\n            \"amount\": 250,\r\n            \"sub_allocations\": [\r\n                {\r\n                    \"sub_allocation_id\": \"22\",\r\n                    \"amount\": 0\r\n                },\r\n                {\r\n                    \"sub_allocation_id\": \"23\",\r\n                    \"amount\": 250\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"allocation_id\": \"50\",\r\n            \"amount\": 250,\r\n            \"sub_allocations\": [\r\n                {\r\n                    \"sub_allocation_id\": \"25\",\r\n                    \"amount\": 250\r\n                },\r\n                {\r\n                    \"sub_allocation_id\": \"26\",\r\n                    \"amount\": 0\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://icandefine.com/api_control/service/sp.php?service=add_income",
+							"protocol": "https",
+							"host": [
+								"icandefine",
+								"com"
+							],
+							"path": [
+								"api_control",
+								"service",
+								"sp.php"
+							],
+							"query": [
+								{
+									"key": "service",
+									"value": "add_income"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_income",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "ce82e7e81711b2bb095fd70284dae3c1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://icandefine.com/api_control/service/sp.php?service=list_income&station=3",
+							"protocol": "https",
+							"host": [
+								"icandefine",
+								"com"
+							],
+							"path": [
+								"api_control",
+								"service",
+								"sp.php"
+							],
+							"query": [
+								{
+									"key": "service",
+									"value": "list_income"
+								},
+								{
+									"key": "station",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "93e9e50e34c678ec452f93216187530e",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://icandefine.com/api_control/service/sp.php?service=list_report&station=1&allocation_name=รายได้แผ่นดิน",
+							"protocol": "https",
+							"host": [
+								"icandefine",
+								"com"
+							],
+							"path": [
+								"api_control",
+								"service",
+								"sp.php"
+							],
+							"query": [
+								{
+									"key": "service",
+									"value": "list_report"
+								},
+								{
+									"key": "station",
+									"value": "1"
+								},
+								{
+									"key": "allocation_name",
+									"value": "รายได้แผ่นดิน"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "recheck_income",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "448d0670738071c6178782de2103a851",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://icandefine.com/api_control/service/sp.php?service=recheck_income&station=3",
+							"protocol": "https",
+							"host": [
+								"icandefine",
+								"com"
+							],
+							"path": [
+								"api_control",
+								"service",
+								"sp.php"
+							],
+							"query": [
+								{
+									"key": "service",
+									"value": "recheck_income"
+								},
+								{
+									"key": "station",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "diffupdate_income",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "448d0670738071c6178782de2103a851",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "income_id",
+									"value": "88",
+									"type": "text"
+								},
+								{
+									"key": "total_amount",
+									"value": "1000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://icandefine.com/api_control/service/sp.php?service=diffupdate_income",
+							"protocol": "https",
+							"host": [
+								"icandefine",
+								"com"
+							],
+							"path": [
+								"api_control",
+								"service",
+								"sp.php"
+							],
+							"query": [
+								{
+									"key": "service",
+									"value": "diffupdate_income"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "ac90cc570a9866689c5d386bd3348942",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"armmy@gmail.com\", ///somruthai.2345@gmail.com สิทธิ์ ภจว\r\n    \"password\": \"123456\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://icandefine.com/api_control/service/pt.php?service=login",
+							"protocol": "https",
+							"host": [
+								"icandefine",
+								"com"
+							],
+							"path": [
+								"api_control",
+								"service",
+								"pt.php"
+							],
+							"query": [
+								{
+									"key": "service",
+									"value": "login"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api_keys",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://icandefine.com/api_control/service/api_keys.php",
+					"protocol": "https",
+					"host": [
+						"icandefine",
+						"com"
+					],
+					"path": [
+						"api_control",
+						"service",
+						"api_keys.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

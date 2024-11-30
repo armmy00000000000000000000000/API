@@ -1,0 +1,8 @@
+[19-Apr-2024 07:35:20 UTC] PHP Warning:  Undefined variable $q in /home/zkyqpszw/public_html/icandefine.com/api/service/admin/asset/excelimportAsset.php on line 30
+[19-Apr-2024 22:58:26 UTC] PHP Warning:  Undefined array key "excel" in /home/zkyqpszw/public_html/icandefine.com/api/service/admin/asset/excelimportAsset.php on line 9
+[19-Apr-2024 22:58:26 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/zkyqpszw/public_html/icandefine.com/api/service/admin/asset/excelimportAsset.php on line 9
+[19-Apr-2024 22:58:26 UTC] PHP Fatal error:  Uncaught TypeError: PhpOffice\PhpSpreadsheet\IOFactory::load(): Argument #1 ($filename) must be of type string, null given, called in /home/zkyqpszw/public_html/icandefine.com/api/service/admin/asset/excelimportAsset.php on line 10 and defined in /home/zkyqpszw/public_html/icandefine.com/api/service/admin/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/IOFactory.php:102
+Stack trace:
+#0 /home/zkyqpszw/public_html/icandefine.com/api/service/admin/asset/excelimportAsset.php(10): PhpOffice\PhpSpreadsheet\IOFactory::load()
+#1 {main}
+  thrown in /home/zkyqpszw/public_html/icandefine.com/api/service/admin/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/IOFactory.php on line 102
