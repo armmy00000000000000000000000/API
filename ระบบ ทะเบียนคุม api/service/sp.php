@@ -34,6 +34,9 @@ switch ($_GET["service"]) {
 	case "test":
 		include("SP/report/test.php");
 	break;
+	case "del_income":
+		include("SP/del_income.php");
+	break;
 
 
 	default:
