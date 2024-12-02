@@ -40,7 +40,7 @@ try {
         // สร้าง API key ใหม่และบันทึกลงในฐานข้อมูล
         $apiKey = generateApiKey();
         // $expirationDate = date('Y-m-d H:i:s', strtotime('+1 hour')); // เพิ่มเวลา 1 ชั่วโมง
-        $expirationDate = date('Y-m-d H:i:s', strtotime('+2 hours 30 minutes')); // เพิ่มเวลา 2 ชั่วโมง 30 นาที
+        $expirationDate = date('Y-m-d H:i:s', strtotime('+8 hours 30 minutes')); // เพิ่มเวลา 2 ชั่วโมง 30 นาที
 
         $query = $conn->prepare("
             INSERT INTO api_keys (`key`, `status`, `expiration_date`) 
