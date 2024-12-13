@@ -43,7 +43,7 @@ try {
         if (!isset($groupedData[$month])) {
             $groupedData[$month] = [];
         }
-        $groupedData[$month][] = [
+        $groupedData[$month][] = [ 
             "allocation_name" => $row['allocation_name'],
             "date_time" => $row['date_time'],
             "grouped_allocation_name" => $row['grouped_allocation_name'],

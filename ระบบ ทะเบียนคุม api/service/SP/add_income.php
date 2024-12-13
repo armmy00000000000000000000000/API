@@ -11,13 +11,14 @@ $status = "รับ";
 $station = $data['station'];
 $note = $data['note'];
 $year = $data['year'];
+$status_tells_details = $data['status_tells_details'];
 $status_type = 'Pending';
 $allocations = $data['allocations'];
 
 try {
     // Insert income record using a prepared statement
-    $sql = "INSERT INTO income (income_date, document_number, payment_type, income_type_id, total_amount,status, station,note,year,status_type) 
-            VALUES (:income_date, :document_number, :payment_type, :income_type_id, :total_amount, :status, :station,:note,:year,:status_type)";
+    $sql = "INSERT INTO income (income_date, document_number, payment_type, income_type_id, total_amount,status, station,note,year,status_type,status_tells_details) 
+            VALUES (:income_date, :document_number, :payment_type, :income_type_id, :total_amount, :status, :station,:note,:year,:status_type:status_tells_details)";
     $stmt = $conn->prepare($sql);
     $stmt->execute([
         ':income_date' => $income_date,
@@ -29,6 +30,7 @@ try {
         ':station' => $station,
         ':note' => $note,
         ':year' => $year,
+        ':status_tells_details' => $status_tells_details,
         ':status_type' => $status_type,
     ]);
     $income_id = $conn->lastInsertId();
